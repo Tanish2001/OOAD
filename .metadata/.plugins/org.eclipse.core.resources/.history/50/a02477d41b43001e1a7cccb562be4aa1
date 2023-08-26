@@ -1,0 +1,7 @@
+package com.aurionpro.model;
+
+public class printUtil {
+	public void printSalarySlip(Employee emp) {
+		System.out.println("Salary of "+emp.name+" is "+EmployeeLogic.calculateTotalSalary(emp));
+	}
+}

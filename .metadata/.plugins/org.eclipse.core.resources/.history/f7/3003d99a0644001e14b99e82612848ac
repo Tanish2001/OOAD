@@ -1,0 +1,30 @@
+package com.aurionpro.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Inventory {
+	List<Guitar> guitarList = new ArrayList<Guitar>();
+	
+	public void addGuitar(String serialNumber,double price,String builder,String 						model,String type,String backwood,String topwood) {
+		Guitar newGuitar = new Guitar(serialNumber, price, builder, model, type, backwood, 										topwood);
+		guitarList.add(newGuitar);
+	}
+	
+	public List<Guitar> getInventory() {
+		return guitarList;
+	}
+	
+	public Guitar getGuitar(String serialNumber) {
+		for (Guitar guitar : guitarList) {
+			if(guitar.getSerialNumber().equalsIgnoreCase(serialNumber)) {
+				return guitar;
+			}
+		}
+		return null;
+	}
+	
+	public void searchGuitar() {
+		
+	}
+}

@@ -1,0 +1,18 @@
+package com.aurionpro.test;
+
+import com.aurionpro.model.Inventory;
+
+public class GuitarTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Inventory i = new Inventory();
+		i.addGuitar("1", 20, "build", "Aries", "Guitar", "Alder", "Alder");
+		i.addGuitar("2", 60, "build", "A2", "Guitar", "Black Limba", "Black Limba");
+		i.addGuitar("2", 600, "build", "DC", "Guitar", "Walnut", "Walnut");
+		
+		System.out.println(i.getInventory());;
+	}
+	
+
+}

@@ -1,0 +1,13 @@
+package com.aurionpro.model;
+
+public class Guitar {
+String serialNumber;
+double price;
+String builder;
+String model;
+String type;
+String backWood;
+String topWood;
+
+
+}

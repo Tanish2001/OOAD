@@ -1,0 +1,9 @@
+package com.aurionpro.model;
+
+public class GuitarSpec{
+	Builder builder;
+	String model;
+	Type type;
+	Wood backWood;
+	Wood topWood;
+}

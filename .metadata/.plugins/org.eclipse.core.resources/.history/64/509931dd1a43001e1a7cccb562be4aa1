@@ -1,0 +1,26 @@
+package com.aurionpro.model;
+
+public class EmployeeLogic {
+	double tax =0;
+	//public EmployeeLogic(Employee employee) {
+		public double calculateTotalSalary(Employee emp) {
+			return emp.basic+emp.hra+emp.da+emp.ta;
+		}
+
+		public double calculateTax(Employee emp) {
+			if(this.calculateTotalSalary(emp)*12>500000 && this.calculateTotalSalary(emp)*12<800000) {
+				this.tax = 10;
+				return this.calculateTotalSalary(emp)*12*10/100;
+			}
+			else if(this.calculateTotalSalary(emp)*12>800000 && this.calculateTotalSalary(emp)*12<1000000) {
+				this.tax = 20;
+				return this.calculateTotalSalary(emp)*12*20/100;
+			}
+			else {
+				this.tax = 30;
+				return this.calculateTotalSalary(emp)*12*30/100;
+			}
+		}
+
+	}
+}
