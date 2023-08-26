@@ -27,9 +27,7 @@ public class Inventory {
 	public List<Guitar> searchGuitar(GuitarSpec spec) {
 		List<Guitar> searchResults = new ArrayList<Guitar>();
 		for (Guitar guitar2 : guitarList) {
-			if(spec.getBackWood()==guitar2.getSpecs().getBackWood() && spec.getBuilder()==guitar2.getSpecs().getBuilder() &&
-					spec.getModel().equalsIgnoreCase(guitar2.getSpecs().getModel()) && spec.getTopWood()==guitar2.getSpecs().getTopWood() &&
-					spec.getType()==guitar2.getSpecs().getType()) {
+			if(spec.matches(guitar2.getSpecs())) {
 				searchResults.add(guitar2);
 			}
 		}

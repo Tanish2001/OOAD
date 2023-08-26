@@ -12,16 +12,16 @@ public class GuitarTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Inventory i = new Inventory();
-		i.addGuitar("1", 200, new GuitarSpec(Builder.COLLINGS, "Aris", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER));
-		i.addGuitar("2", 700, new GuitarSpec(Builder.COLLINGS, "A1", Type.ELECTRIC, Wood.CEDAR, Wood.ALDER));
-		i.addGuitar("3", 900, new GuitarSpec(Builder.COLLINGS, "A1", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER));
-		i.addGuitar("4", 100, new GuitarSpec(Builder.COLLINGS, "A1", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER));
-		i.addGuitar("5", 200, new GuitarSpec(Builder.COLLINGS, "A1", Type.ELECTRIC, Wood.CEDAR, Wood.ALDER));
+		i.addGuitar("1", 200, new GuitarSpec(Builder.COLLINGS, "Aris", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER, 12));
+		i.addGuitar("2", 700, new GuitarSpec(Builder.COLLINGS, "A1", Type.ELECTRIC, Wood.CEDAR, Wood.ALDER, 12));
+		i.addGuitar("3", 900, new GuitarSpec(Builder.COLLINGS, "A1", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER, 12));
+		i.addGuitar("4", 100, new GuitarSpec(Builder.COLLINGS, "A1", Type.ACOUSTIC, Wood.ALDER, Wood.ALDER, 12));
+		i.addGuitar("5", 200, new GuitarSpec(Builder.COLLINGS, "A1", Type.ELECTRIC, Wood.CEDAR, Wood.ALDER, 12));
 
 		
 //		System.out.println(i.getInventory());;
 //		System.out.println(i.getGuitar("3"));
-		GuitarSpec g = new GuitarSpec(Builder.COLLINGS, "A1", Type.ELECTRIC, Wood.CEDAR, Wood.ALDER);
+		GuitarSpec g = new GuitarSpec(Builder.COLLINGS, "A1", Type.ELECTRIC, Wood.CEDAR, Wood.ALDER, 12);
 		System.out.println(i.searchGuitar(g));
 	}
 	

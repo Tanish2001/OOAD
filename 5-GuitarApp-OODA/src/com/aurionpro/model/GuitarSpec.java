@@ -6,14 +6,24 @@ public class GuitarSpec {
 	Type type;
 	Wood backWood;
 	Wood topWood;
+	private int numberOfStrings;
 
-	public GuitarSpec(Builder builder, String model, Type type, Wood backWood, Wood topWood) {
+	public GuitarSpec(Builder builder, String model, Type type, Wood backWood, Wood topWood, int numberOfStrings) {
 		super();
 		this.builder = builder;
 		this.model = model;
 		this.type = type;
 		this.backWood = backWood;
 		this.topWood = topWood;
+		this.numberOfStrings = numberOfStrings;
+	}
+
+	public int getNumberOfStrings() {
+		return numberOfStrings;
+	}
+
+	public void setNumberOfStrings(int numberOfStrings) {
+		this.numberOfStrings = numberOfStrings;
 	}
 
 	public Builder getBuilder() {
@@ -56,10 +66,21 @@ public class GuitarSpec {
 		this.topWood = topWood;
 	}
 
+	public boolean matches(GuitarSpec specs) {
+		if(this.getBuilder()==specs.getBuilder() && this.getBackWood()==specs.getBackWood() && 
+				this.getModel().equalsIgnoreCase(specs.getModel()) && this.getNumberOfStrings()==specs.getNumberOfStrings()
+				&& this.getTopWood()==specs.getTopWood() && this.getType()==specs.getType()) {
+			return true;
+		}
+		return false;
+	}
+
 	@Override
 	public String toString() {
 		return "GuitarSpec [builder=" + builder + ", model=" + model + ", type=" + type + ", backWood=" + backWood
-				+ ", topWood=" + topWood + "]";
+				+ ", topWood=" + topWood + ", numberOfStrings=" + numberOfStrings + "]";
 	}
+	
+	
 
 }
